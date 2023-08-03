@@ -7,9 +7,21 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  :root {
+    font-size: 62.5%;
+  }
+
   body {
     background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
     color: ${({ theme }) => theme.COLORS.WHITE};
+
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html, body, inputs, button, textarea {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.6rem;
+    outline: none;
   }
 
   a {
