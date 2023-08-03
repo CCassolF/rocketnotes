@@ -1,3 +1,4 @@
+import { Button } from "../../components/Button/index.jsx"
 import { Container } from "./styles.js"
 
 export function Details() {
@@ -6,6 +7,7 @@ export function Details() {
       <h1>Rocket Notes</h1>
       <span>Aplicações para salvar e gerenciar seus links úteis.</span>
 
+      <Button />
     </Container>
   )
 }
