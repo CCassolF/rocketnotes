@@ -23,6 +23,10 @@ export const Container = styled.div`
     &::placeholder {
       color: ${({ theme }) => theme.COLORS.BACKGROUND_300};
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   > svg {
