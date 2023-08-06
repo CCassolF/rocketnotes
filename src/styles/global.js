@@ -11,6 +11,15 @@ export default createGlobalStyle`
     font-size: 62.5%;
   }
 
+  ::-webkit-scrollbar {
+    width: .6em;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.GRAY_300};
+    border-radius: 2.4rem;
+  }
+
   body {
     background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
     color: ${({ theme }) => theme.COLORS.WHITE};
