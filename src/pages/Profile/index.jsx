@@ -7,7 +7,7 @@ import { useAuth } from '../../hooks/auth';
 import { api } from "../../services/api";
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Profile() {
   const { user, updateProfile } = useAuth()
@@ -18,8 +18,14 @@ export function Profile() {
   const [passwordNew, setPasswordNew] = useState()
 
   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder 
-  const [avatar, setAvatar] = useState(user.avatar)
+  const [avatar, setAvatar] = useState(avatarUrl)
   const [avatarFile, setAvatarFile] = useState(null)
+
+  const navigate = useNavigate()
+
+  function handleBack() {
+    navigate(-1)
+  }
 
   async function handleUpdate() {
     const user = {
@@ -43,16 +49,16 @@ export function Profile() {
   return (
     <Container>
       <header>
-        <Link to="/">
-          <FiArrowLeft />
-        </Link>
+        <button type="button" onClick={handleBack} to="/">
+          <FiArrowLeft size={24} />
+        </button>
       </header>
 
       <Form>
         <Avatar>
           <img 
-            src={avatarUrl} 
-            alt="Foto do usuário" 
+            src={avatar} 
+            alt={user.name}
           />
 
           <label htmlFor="avatar">
