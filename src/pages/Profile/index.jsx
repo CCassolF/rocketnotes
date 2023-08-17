@@ -1,4 +1,5 @@
 import { FiArrowLeft, FiCamera, FiLock, FiMail, FiUser } from "react-icons/fi";
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 import { Avatar, Container, Form } from "./styles";
