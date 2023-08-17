@@ -41,6 +41,7 @@ export const Menu = styled.ul`
   
   border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
   padding-top: 6.4rem;
   text-align: center;
 
